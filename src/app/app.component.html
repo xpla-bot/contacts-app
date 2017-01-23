@@ -9,24 +9,25 @@
                 <div class="contact-title">Contact detail</div>
                 <div class="detail-wrapper">
                     <div class="image">
-                        <img src="assets/images/people/unknown.jpg" alt="">
-                        <div class="name">Mario González</div>
+                        <img src="assets/images/people/{{contactSelected.image}}" alt="">
+                        <div class="name">{{contactSelected.name}} {{contactSelected.surname}}</div>
                     </div>
                     <div class="favorite-icon">
-                        <img src="assets/images/contactFavoriteDisabled.png" alt="favorite contact">
+                        <img src="assets/images/contactFavoriteEnabled.png" alt="favorite contact" *ngIf="contactSelected.favorite">
+                        <img src="assets/images/contactFavoriteDisabled.png" alt="favorite contact" *ngIf="!contactSelected.favorite">
                     </div>
                     <div class="data">
                         <dl>
                             <dt>Address</dt>
-                            <dd>200 Newbury St.</dd>
+                            <dd>{{contactSelected.address}}</dd>
                             <dt>Zipcode</dt>
-                            <dd>02116</dd>
+                            <dd>{{contactSelected.zipcode}}</dd>
                             <dt>City</dt>
-                            <dd>Boston</dd>
+                            <dd>{{contactSelected.city}}</dd>
                             <dt>Phone</dt>
-                            <dd>(555) 1234-567</dd>
+                            <dd>{{contactSelected.phone}}</dd>
                             <dt>Email</dt>
-                            <dd>mariog@gmail.com</dd>
+                            <dd>{{contactSelected.email}}</dd>
                         </dl>
                     </div>
                 </div>
