@@ -18,7 +18,8 @@
                 <dt>City</dt>
                 <dd>{{contactSelected.city}}</dd>
                 <dt>Phone</dt>
-                <dd>{{contactSelected.phone}}</dd>
+                <!-- Advanced: Add a pipe to format the us phone number displayed  -->
+                <dd>{{contactSelected.phone | usPhone}}</dd>
                 <dt>Email</dt>
                 <dd>{{contactSelected.email}}</dd>
             </dl>
